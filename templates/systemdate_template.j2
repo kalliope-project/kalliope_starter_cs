@@ -1,0 +1,49 @@
+{% set day_of_week = {
+    "0": "neděle",
+    "1": "pondělí",
+    "2": "úterý",
+    "3": "středa",
+    "4": "čtvrtek",
+    "5": "pátek",
+    "6": "sobota"
+    }[weekday] | default("")
+-%}
+
+{% set month_word = {"1": "leden", "2": "únor", "3": "březen", "4": "duben", "5": "květen", "6": "červen", "7": "červenec", "8": "srpen", "9": "září", "10": "říjen", "11": "listopad", "12": "prosinec"}[month] | default("") -%}
+
+{% set day_month_formated = {
+    "1": "první",
+    "2": "druhý",
+    "3": "třetí",
+    "4": "čtvrtý",
+    "5": "pátý",
+    "6": "šestý",
+    "7": "sedmý",
+    "8": "osmý",
+    "9": "devátý",
+    "10": "desátý",
+    "11": "jedenáctý",
+    "12": "dvanáctý",
+    "13": "třináctý",
+    "14": "čtrnáctý",
+    "15": "patnáctý",
+    "16": "šestnáctý",
+    "17": "sedmnáctý",
+    "18": "osmnáctý",
+    "19": "devatenáctý",
+    "20": "dvacátý",
+    "21": "dvacátý-první",
+    "22": "dvacátý-druhý",
+    "23": "dvacátý-třetí",
+    "24": "dvacátý-čtvrtý",
+    "25": "dvacátý-pátý",
+    "26": "dvacátý-šestý",
+    "27": "dvacátý-sedmý",
+    "28": "dvacátý-osmý",
+    "29": "dvacátý-devátý",
+    "30": "třicátý",
+    "31": "třicátý-první",
+
+}[day_month] | default("") -%}
+
+Je {{ day_of_week }} {{ month_word }} den {{ day_month_formated }} a rok {{ year }}

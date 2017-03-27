@@ -1,0 +1,20 @@
+---
+
+  - includes:
+        - brains/say.yml
+        - brains/systemdate.yml
+        - brains/neurotransmitter.yml
+
+  - name: "default-synapse"
+    signals:
+      - order: "default-synapse"
+    neurons:
+      - say:
+          message:
+            - "Nerozuměla jsem"
+            - "Nevím, co udělat"
+            - "Zopakuj prosím svůj požadavek"
+            - "Můžeš prosím zopakovat požadavek?"
+            - "Nedokážu rozpoznat požadavek"
+
+

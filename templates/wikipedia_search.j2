@@ -1,0 +1,12 @@
+{% if returncode == "DisambiguationError" %}
+    Požadavek se shoduje s následujícíma stránkama
+    {% if may_refer is not none %}
+        {% for page in may_refer %}
+            {{ page }}
+        {% endfor %}
+    {% endif %}
+{% elif returncode == "PageError" %}
+    Nic jsem nenašla
+{% else %}
+    {{ summary }}
+{% endif %}

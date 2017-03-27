@@ -1,0 +1,24 @@
+---
+
+  - name: "say-local-date"
+    signals:
+      - order: "jaký je čas"
+      - order: "kolik je hodin"
+    neurons:
+      - systemdate:
+          say_template:
+            - "je {{ hours }} hodin a {{ minutes }} minut"
+
+  - name: "say-local-date-from-template"
+    signals:
+      - order: "jaké je datum"
+    neurons:
+      - systemdate:
+          file_template: "templates/systemdate_template.j2"
+
+  - name: "tea-time"
+    signals:
+      - order: "je čas na čaj"
+    neurons:
+      - systemdate:
+          file_template: "templates/systemdate_template_tea.j2"

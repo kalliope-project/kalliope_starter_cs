@@ -1,0 +1,41 @@
+---
+  - name: "synapse1"
+    signals:
+      - order: "dej mi otázku"
+      - order: "zeptej se mě na něco"
+    neurons:
+      - say:
+          message: "máš rád hranolky?"
+      - neurotransmitter:
+          from_answer_link:
+            - synapse: "synapse2"
+              answers:
+                - "určitě"
+                - "rozhodně"
+            - synapse: "synapse3"
+              answers:
+                - "nemám"
+                - "vůbec ne"
+          default: "synapse4"
+
+  - name: "synapse2"
+    signals:
+      - order: "synapse2"
+    neurons:
+      - say:
+          message: "Máš rád hranolky! Já taky!"
+
+
+  - name: "synapse3"
+    signals:
+      - order: "synapse3"
+    neurons:
+      - say:
+          message: "Nemáš rád hranolky."
+
+  - name: "synapse4"
+    signals:
+      - order: "synapse4"
+    neurons:
+      - say:
+          message: "Nerozumněla jsem ti"
