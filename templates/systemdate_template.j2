@@ -9,18 +9,18 @@
     }[weekday] | default("")
 -%}
 
-{% set month_word = {"1": "leden", "2": "únor", "3": "březen", "4": "duben", "5": "květen", "6": "červen", "7": "červenec", "8": "srpen", "9": "září", "10": "říjen", "11": "listopad", "12": "prosinec"}[month] | default("") -%}
+{% set month_word = {"01": "leden", "02": "únor", "03": "březen", "04": "duben", "05": "květen", "06": "červen", "07": "červenec", "08": "srpen", "09": "září", "10": "říjen", "11": "listopad", "12": "prosinec"}[month] | default("") -%}
 
 {% set day_month_formated = {
-    "1": "první",
-    "2": "druhý",
-    "3": "třetí",
-    "4": "čtvrtý",
-    "5": "pátý",
-    "6": "šestý",
-    "7": "sedmý",
-    "8": "osmý",
-    "9": "devátý",
+    "01": "první",
+    "02": "druhý",
+    "03": "třetí",
+    "04": "čtvrtý",
+    "05": "pátý",
+    "06": "šestý",
+    "07": "sedmý",
+    "08": "osmý",
+    "09": "devátý",
     "10": "desátý",
     "11": "jedenáctý",
     "12": "dvanáctý",
