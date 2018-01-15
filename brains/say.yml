@@ -4,5 +4,5 @@
       - order: "Ahoj"
     neurons:
       - say:
-          message:
-            - "Ahoj zdraví {{name}}"
+          message: "Ahoj zdraví {{name}}"
+

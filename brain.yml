@@ -4,10 +4,10 @@
         - brains/say.yml
         - brains/systemdate.yml
         - brains/neurotransmitter.yml
+        - brains/uri.yml
 
-  - name: "default-synapse"
-    signals:
-      - order: "default-synapse"
+  - name: "order-not-found-synapse"
+    signals: []
     neurons:
       - say:
           message:
@@ -17,4 +17,19 @@
             - "Můžeš prosím zopakovat požadavek?"
             - "Nedokážu rozpoznat požadavek"
 
+  - name: "on-triggered-synapse"
+    signals: []
+    neurons:
+      - say:
+          message:
+            - "Ano?"
+            - "Poslouchám"
+            - "Poslouchám tě"
+            - "Co pro tebe můžu udělat?"
+            - "Jak ti můžu pomoci?"
 
+  - name: "on-start-synapse"
+    signals: []
+    neurons:
+      - say:
+          message: "Jsem připravena"
